@@ -241,7 +241,7 @@ msbuild -Restore %SOURCE_ROOT%\wix\Moonlight\Moonlight.wixproj /p:Configuration=
 if !ERRORLEVEL! NEQ 0 goto Error
 
 echo Copying application binary to deployment directory
-copy %BUILD_FOLDER%\app\%BUILD_CONFIG%\Moonlight.exe %DEPLOY_FOLDER%
+copy "%BUILD_FOLDER%\app\%BUILD_CONFIG%\Moonlight.exe" "%DEPLOY_FOLDER%\Moonlight Repacked.exe"
 if !ERRORLEVEL! NEQ 0 goto Error
 
 echo Building portable package

@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>CFBundleExecutable</key>
-	<string>Moonlight</string>
+	<string>Moonlight Repacked</string>
 	<key>CFBundleGetInfoString</key>
 	<string>Stream games and other applications from another PC</string>
 	<key>CFBundleIconFile</key>
@@ -43,6 +43,6 @@
 	<key>CFBundleShortVersionString</key>
 	<string>VERSION</string>
 	<key>CFBundleDisplayName</key>
-	<string>Moonlight</string>
+	<string>Moonlight Repacked</string>
 </dict>
 </plist>

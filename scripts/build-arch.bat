@@ -5,6 +5,8 @@ rem Run from Qt command prompt with working directory set to root of repo
 
 set BUILD_CONFIG=%1
 
+if "%BUILD_CONFIG%"=="" set BUILD_CONFIG=release
+
 rem Convert to lower case for windeployqt
 if /I "%BUILD_CONFIG%"=="debug" (
     set BUILD_CONFIG=debug

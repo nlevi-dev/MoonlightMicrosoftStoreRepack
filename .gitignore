@@ -7,3 +7,6 @@ config.tests/*/.qmake.stash
 config.tests/*/Makefile
 
 MicrosoftStore/*.exe
+MicrosoftStore/*.msix
+MicrosoftStore/*_template.xml
+MicrosoftStore/msix_info.txt

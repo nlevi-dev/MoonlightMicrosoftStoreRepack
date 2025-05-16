@@ -10,3 +10,4 @@ MicrosoftStore/*.exe
 MicrosoftStore/*.msix
 MicrosoftStore/*_template.xml
 MicrosoftStore/msix_info.txt
+MicrosoftStore/unpack/*

@@ -110,10 +110,6 @@ CenteredGridView {
             }
 
             // Display a tooltip with the full name if it's truncated
-            ToolTip.text: model.name
-            ToolTip.delay: 1000
-            ToolTip.timeout: 5000
-            ToolTip.visible: (parent.hovered || parent.highlighted) && (!appNameText || appNameText.truncated)
         }
 
         Loader {
@@ -142,10 +138,6 @@ CenteredGridView {
                         launchOrResumeSelectedApp(true)
                     }
 
-                    ToolTip.text: qsTr("Resume Game")
-                    ToolTip.delay: 1000
-                    ToolTip.timeout: 3000
-                    ToolTip.visible: hovered
 
                     Material.background: "#D0808080"
                 }
@@ -170,10 +162,6 @@ CenteredGridView {
                         doQuitGame()
                     }
 
-                    ToolTip.text: qsTr("Quit Game")
-                    ToolTip.delay: 1000
-                    ToolTip.timeout: 3000
-                    ToolTip.visible: hovered
 
                     Material.background: "#D0808080"
                 }
@@ -317,10 +305,6 @@ CenteredGridView {
                     onTriggered: appModel.setAppDirectLaunch(model.index, !model.directLaunch)
                     enabled: !model.hidden
 
-                    ToolTip.text: qsTr("Launch this app immediately when the host is selected, bypassing the app selection grid.")
-                    ToolTip.delay: 1000
-                    ToolTip.timeout: 3000
-                    ToolTip.visible: hovered
                 }
                 NavigableMenuItem {
                     parentMenu: appContextMenu
@@ -330,10 +314,6 @@ CenteredGridView {
                     onTriggered: appModel.setAppHidden(model.index, !model.hidden)
                     enabled: model.hidden || (!model.running && !model.directLaunch)
 
-                    ToolTip.text: qsTr("Hide this game from the app grid. To access hidden games, right-click on the host and choose %1.").arg(qsTr("View All Apps"))
-                    ToolTip.delay: 1000
-                    ToolTip.timeout: 5000
-                    ToolTip.visible: hovered
                 }
             }
         }

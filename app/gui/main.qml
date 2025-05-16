@@ -272,10 +272,6 @@ ApplicationWindow {
 
                 iconSource: "qrc:/res/discord.svg"
 
-                ToolTip.delay: 1000
-                ToolTip.timeout: 3000
-                ToolTip.visible: hovered
-                ToolTip.text: qsTr("Join our community on Discord")
 
                 // TODO need to make sure browser is brought to foreground.
                 onClicked: Qt.openUrlExternally("https://moonlight-stream.org/discord");
@@ -291,10 +287,6 @@ ApplicationWindow {
 
                 iconSource:  "qrc:/res/ic_add_to_queue_white_48px.svg"
 
-                ToolTip.delay: 1000
-                ToolTip.timeout: 3000
-                ToolTip.visible: hovered
-                ToolTip.text: qsTr("Add PC manually") + (newPcShortcut.nativeText ? (" ("+newPcShortcut.nativeText+")") : "")
 
                 Shortcut {
                     id: newPcShortcut
@@ -318,9 +310,6 @@ ApplicationWindow {
 
                 iconSource: "qrc:/res/update.svg"
 
-                ToolTip.delay: 1000
-                ToolTip.timeout: 3000
-                ToolTip.visible: hovered || visible
 
                 // Invisible until we get a callback notifying us that
                 // an update is available
@@ -334,7 +323,6 @@ ApplicationWindow {
 
                 function updateAvailable(version, url)
                 {
-                    ToolTip.text = qsTr("Update available for Moonlight: Version %1").arg(version)
                     updateButton.browserUrl = url
                     updateButton.visible = true
                 }
@@ -355,10 +343,6 @@ ApplicationWindow {
 
                 iconSource: "qrc:/res/question_mark.svg"
 
-                ToolTip.delay: 1000
-                ToolTip.timeout: 3000
-                ToolTip.visible: hovered
-                ToolTip.text: qsTr("Help") + (helpShortcut.nativeText ? (" ("+helpShortcut.nativeText+")") : "")
 
                 Shortcut {
                     id: helpShortcut
@@ -378,10 +362,6 @@ ApplicationWindow {
                 // TODO: Implement gamepad mapping then unhide this button
                 visible: false
 
-                ToolTip.delay: 1000
-                ToolTip.timeout: 3000
-                ToolTip.visible: hovered
-                ToolTip.text: qsTr("Gamepad Mapper")
 
                 iconSource: "qrc:/res/ic_videogame_asset_white_48px.svg"
 
@@ -409,10 +389,6 @@ ApplicationWindow {
                     onActivated: settingsButton.clicked()
                 }
 
-                ToolTip.delay: 1000
-                ToolTip.timeout: 3000
-                ToolTip.visible: hovered
-                ToolTip.text: qsTr("Settings") + (settingsShortcut.nativeText ? (" ("+settingsShortcut.nativeText+")") : "")
             }
         }
     }

@@ -4,6 +4,8 @@
 
 ## Repack for Microsoft Store
 
+[Moonlight Repacked - Microsoft Store](https://apps.microsoft.com/detail/9nkn9n4f7xt6)
+
 This is a repack of the original [moonlight-qt](https://github.com/moonlight-stream/moonlight-qt) repository.
 
 This version is nearly identical to the original 6.1.0 release, with only minor changes to the logo and name. These adjustments are necessary to meet the requirements for publishing on the Microsoft Store, in accordance with clause 10.1.4.6.
